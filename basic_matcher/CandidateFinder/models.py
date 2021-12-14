@@ -30,5 +30,6 @@ class Job(models.Model):
     skills = models.ManyToManyField(Skill)
 
     def __str__(self):
+        """Return string representation of the job"""
         return self.title
 
