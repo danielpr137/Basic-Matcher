@@ -1,0 +1,16 @@
+<select id="selected"name="selectWork" class="filter-selectbox">
+    {% for work in workList %}
+        <option value="{{ work.title }}">{{ work.title }}</option>
+    {% endfor %} </select>
+    <button id="btn">Go</button>
+
+<script>
+    var mutebutton = document.getElementById('btn');
+    var selectedOption = document.getElementById('selected');
+    mutebutton.onclick = function () 
+     {
+        console.log(selectedOption.value)
+        window.open("/search/"+selectedOption.value)
+    }
+
+</script>
